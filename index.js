@@ -16,32 +16,3 @@ function returnsAnAnonymousFunction() {
     console.log("I'm an anonymous function");
   };
 }
-
-// Export the functions for testing
-module.exports = {
-  receivesAFunction,
-  returnsANamedFunction,
-  returnsAnAnonymousFunction,
-};
-
-
-/*receivesAFunction(callback)*/
-function receivesAFunction(callback) {
-  callback();
-}
-
-/*returnsANamedFunction()*/
-function returnsANamedFunction() {
-  function namedFunction() {
-    console.log("I am a named function");
-  }
-  return namedFunction;
-}
-
-/*returnsAnAnonymousFunction()*/
-function returnsAnAnonymousFunction() {
-  return function () {
-    console.log("I am an anonymous function");
-  };
-}
-
